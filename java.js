@@ -12,6 +12,12 @@ async function weather(city) {
   displaysite(data.forecast.forecastday , data.location.name , data.location.country)
 }
 
+
+searchinput.addEventListener('input',function(){
+  weather(searchinput.value)
+
+})
+
 searchbtn.addEventListener('click',function(){
   weather(searchinput.value)
 })
